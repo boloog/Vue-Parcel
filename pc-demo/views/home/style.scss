@@ -1,0 +1,22 @@
+.home-page{
+  // background: #FF5E52;
+  color: #fff;
+  .imgs{
+    margin-bottom: 40px;
+    .logo{
+      width: 190px;
+    }
+    .wx-qrcode{
+      width: 220px;
+      border-radius: 4px;
+    }
+  }
+  .btn-primary{
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 24px;
+    border-radius: 4px;
+    background: #194da0;
+    text-decoration: none;
+  }
+}
