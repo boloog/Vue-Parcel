@@ -1,0 +1,104 @@
+.home-page{
+  color: #fff;
+  font-size: 0.3rem;
+  .nav-box{
+    position: fixed;
+    top: 0;
+    display: none;
+    width: 100%;
+    border-bottom: solid 1px #7e7e7e;
+    height: .8rem;
+    z-index: 101;
+    background: #f9f9f9;
+    overflow: hidden;
+    &.show{
+      display: block;
+    }
+    .tab-nav{
+      padding-left: .4rem;
+      margin-right: 1.8rem;
+      height: 0.8rem;
+      a{
+        display: inline-block;
+        text-decoration: none;
+        padding: 0 .1rem;
+        line-height: .8rem;
+        height: .8rem;
+        position: relative;
+        vertical-align: top;
+        font-size: .24rem;
+        color: #000;
+        margin-right: .3rem;
+        transition: all ease .3s;
+        &.current::after{
+          content: "";
+          position: absolute;
+          width: 88%;
+          height: .26rem;
+          background: #68d7fc;
+          border-radius: .24rem;
+          right: -.12rem;
+          bottom: .2rem;
+          z-index: 1;
+          opacity: 1;
+          transition: all ease .3s;
+        }
+        &::before{
+          content: "";
+          opacity: 0;
+          transition: all ease .3s;
+
+        }
+        &::after{
+          position: absolute;
+          content: "";
+          width: .17rem;
+          height: .23rem;
+          background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAXBAMAAAAfGrnUAAAAGFBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABWNxwqAAAACHRSTlMARAUOOiIwGIArCPcAAABOSURBVAjXY4ACVgUYy4QBBoRgDLYCGKsExmCCS7LAJcPgkgIwFqMBjBUKYzAjJOF2psIlHWAsRbikO4zBngCXhLvRGe4BuKQhXLIYxgAAkHAGBL3Ni8MAAAAASUVORK5CYII=) no-repeat;
+          background-size: 100% 100%;
+          right: -.25rem;
+          top: 50%;
+          margin-top: -.11rem;
+        }
+        &>span{
+          display: block;
+          position: relative;
+          z-index: 2;
+          font-size: .28rem;
+        }
+      }
+    }
+    .btn-nav{
+      position: absolute;
+      height: .8rem;
+      width: 1.54rem;
+      right: 0;
+      top: 0;
+      z-index: 101;
+      background:#f9f9f9 url('./../../assets/images/btn_nav.png') no-repeat;
+      background-size: auto 100%;
+    }
+  }
+  .home-bottom{
+    margin-top: .9rem;
+  }
+  .imgs{
+    margin-bottom: rem(40px);
+    .logo{
+      width: 190px;
+    }
+    .wx-qrcode{
+      width: 220px;
+      border-radius: 4px;
+    }
+  }
+  .btn-primary{
+    color: #fff;
+    padding: 0.1rem 0.2rem;
+    font-size: 0.3rem;
+    line-height: 0.3rem;
+    border-radius: 0.4rem;
+    background: #194da0;
+    text-decoration: none;
+  }
+}

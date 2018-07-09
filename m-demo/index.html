@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="applicable-device" content="mobile">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,maximum-scale=1">
+  <meta name="format-detection" content="telephone=no">
+  <meta content="yes" name="mobile-web-app-capable">
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta name="author" content="BOLOOG">
+  <meta name="keywords" content="a">
+  <meta name="description" content="w,e,n">
+  <title>WEB - PARCEL项目搭建</title>
+  <link rel="stylesheet" href="./assets/css/normalize.scss">
+  <script type="text/javascript">
+    /*响应式布局 start 750 / 100 */
+    function setRootFontSize() {
+      var width = document.documentElement.clientWidth || document.body.clientWidth, fontSize;
+        if (width > 750) {
+            width = 750;
+        }
+        fontSize = (width / 750 * 100);
+        document.getElementsByTagName('html')[0].style['font-size'] = fontSize + 'px';
+    }
+    setRootFontSize();
+    window.addEventListener('resize', function() {
+        setRootFontSize();
+    }, false);
+    /*响应式布局 end*/
+  </script>
+</head>
+<body>
+  <div id="app"></div>
+  <script src="main.js"></script>
+</body>
+</html>

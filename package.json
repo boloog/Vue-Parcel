@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev-pcdemo": "parcel ./pc-demo/index.html -p 1234 --open",
-    "build-pcdemo": "parcel build ./pc-demo/index.html --out-dir ./pc_web --public-url ./ --no-cache"
+    "build-pcdemo": "parcel build ./pc-demo/index.html --out-dir ./pc_web --public-url ./ --no-cache",
+    "dev-mdemo": "parcel ./m-demo/index.html -p 1234 --open",
+    "build-mdemo": "parcel build ./m-demo/index.html --out-dir ./m_web --public-url ./ --no-cache"
   },
   "repository": {
     "type": "git",
