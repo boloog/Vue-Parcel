@@ -2,10 +2,8 @@
   <div class="home-page">
     <div class="nav-box show">
       <div class="tab-nav">
-        <a href="" class="current"><span> 首页</span></a>
-        <a href=""><span> 攻略</span></a>
-        <a href=""><span> 同人</span></a>
-        <a href=""><span> 主角</span></a>
+        <!-- current -->
+        <router-link  v-for="(item, index) in tabNav" :key="index" :to="`${item.path}`" ><span>{{item.name}}</span></router-link>  
       </div>
       <a href="" class="btn-nav"></a>
     </div>
@@ -14,9 +12,7 @@
         <img src="./../../assets/images/logo.png" class="logo">
         <img :src="config.serverUrl +'wx-qrcode.jpg'" class="wx-qrcode">
       </div>
-      <router-link to="/list" class="btn-primary">进入列表页</router-link>
     </div>
-
   </div>
 </template>
 <script>
@@ -31,11 +27,29 @@ export default {
   data () {
     return {
       config,
+      tabNav: [{
+        name: '首页',
+        path: '/'
+      },{
+        name: '列表',
+        path: '/list'
+      }]
     }
   },
   created () {
-    console.log(axios)
+    // console.log(axios)
 
+  },
+  methods: {
+    isNav(reg){
+      if(Object.prototype.toString.call(reg) === '[object RegExp]'){
+        return reg.test(this.$route.path)
+      }else if(Object.prototype.toString.call(reg) === '[object String]'){
+        return new RegExp(reg).test(this.$route.path)
+      }else{
+        return false
+      }
+    },
   }
 }
 </script>
