@@ -16,12 +16,8 @@ export default {
 }
 </script>
 <style lang="scss">
-
-
-body{
-  background: #FF5E52;
-}
-
+  .app{
+    max-width: 750px;
+    margin: 0 auto;
+  }
 </style>
-
-

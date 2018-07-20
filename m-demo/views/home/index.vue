@@ -1,17 +1,12 @@
 <template>
   <div class="home-page">
-    <div class="nav-box show">
-      <div class="tab-nav">
-        <!-- current -->
-        <router-link  v-for="(item, index) in tabNav" :key="index" :to="`${item.path}`" ><span>{{item.name}}</span></router-link>  
-      </div>
-      <a href="" class="btn-nav"></a>
+    <div class="nav-box">
+      <img src="https://css.mafengwo.net/mobile/images/header/logo2.png" class="logo">
+      <div class="nav-search">搜索目的地/攻略/游记</div>
+      <span class="login-button">登录</span>
     </div>
-    <div class="home-bottom">
-      <div class="imgs">
-        <img src="./../../assets/images/logo.png" class="logo">
-        <img :src="config.serverUrl +'wx-qrcode.jpg'" class="wx-qrcode">
-      </div>
+    <div class="swiper-barner">
+      <Swiper></Swiper>
     </div>
   </div>
 </template>
@@ -20,6 +15,8 @@ import axios from 'axios/dist/axios.min.js'
 import "./style.scss"
 
 import config from './../../api/config'
+
+import { Swiper } from './../../components';
 
 
 export default {
@@ -33,6 +30,9 @@ export default {
       },{
         name: '列表',
         path: '/list'
+      },{
+        name: '123',
+        path: '/list'
       }]
     }
   },
@@ -41,15 +41,10 @@ export default {
 
   },
   methods: {
-    isNav(reg){
-      if(Object.prototype.toString.call(reg) === '[object RegExp]'){
-        return reg.test(this.$route.path)
-      }else if(Object.prototype.toString.call(reg) === '[object String]'){
-        return new RegExp(reg).test(this.$route.path)
-      }else{
-        return false
-      }
-    },
+
+  },
+  components: { 
+    Swiper 
   }
 }
 </script>
