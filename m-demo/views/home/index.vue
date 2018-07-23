@@ -8,6 +8,9 @@
     <div class="swiper-barner">
       <Swiper></Swiper>
     </div>
+    <img src="https://m.360buyimg.com/mobilecms/jfs/t23977/215/934912124/149709/a2412b1/5b4866daN1550ce15.gif" class="hot">
+
+    <NavBars></NavBars>
   </div>
 </template>
 <script>
@@ -16,7 +19,7 @@ import "./style.scss"
 
 import config from './../../api/config'
 
-import { Swiper } from './../../components';
+import { Swiper, NavBars } from './../../components';
 
 
 export default {
@@ -44,7 +47,8 @@ export default {
 
   },
   components: { 
-    Swiper 
+    Swiper,
+    NavBars
   }
 }
 </script>

@@ -1,6 +1,7 @@
 .home-page{
   font-size: 0.16rem;
   .nav-box{
+    width: 7.5rem;
     padding: 0.24rem 0;
     background:linear-gradient(#55fcac,transparent);
     position: fixed;
@@ -43,9 +44,9 @@
     }
   }
   .swiper-barner{
-    height: 3.2rem;
-    img{
-      width: 100%;
-    }
+    height: 3.66rem;
+  }
+  .hot{
+    width: 100%;
   }
 }

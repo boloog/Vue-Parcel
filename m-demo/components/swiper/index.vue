@@ -1,9 +1,7 @@
 <template>
 <swiper :options="swiperOption">
     <!-- slides -->
-    <swiper-slide v-for="(item, index) in imgData" :key="index">
-        <img :src="item.url">
-    </swiper-slide>
+    <swiper-slide v-for="(item, index) in imgData" :key="index"><img :src="item.url"></swiper-slide>
 
     <!-- Optional controls -->
     <div class="swiper-pagination" slot="pagination"></div>
@@ -31,6 +29,10 @@ export default {
             },
         },
         imgData: [{
+            url: 'https://m.360buyimg.com/mobilecms/s750x366_jfs/t20674/294/2293871711/108602/c40df657/5b4fe81bN24114433.jpg!cr_1125x549_0_72!q70.jpg.dpg'
+        },{
+            url: 'https://img1.360buyimg.com/da/s750x366_jfs/t23833/42/1122373436/172574/2f3ac744/5b518d4aNd9a525a0.jpg!cr_1125x549_0_72.dpg'
+        },{
             url: 'https://m.360buyimg.com/mobilecms/s750x366_jfs/t21808/163/2250051257/147425/1ffd3b77/5b4d55c5N82ce4d7d.jpg!cr_1125x549_0_72!q70.jpg.dpg'
         },{
             url: 'https://m.360buyimg.com/mobilecms/s750x366_jfs/t20029/272/1765431541/135543/fbf22a8b/5b25a7d0Ncdb4f0f3.jpg!cr_1125x549_0_72!q70.jpg.dpg'
@@ -53,8 +55,13 @@ export default {
 }
 </script>
 
-<style>
-
+<style lang="scss">
+.swiper-container{
+    img {
+        width: 100%;
+        border: none;
+    }
+}
 .swiper-pagination-bullet{
     background: #fff;
 }
