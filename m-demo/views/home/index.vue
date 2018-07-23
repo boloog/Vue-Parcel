@@ -9,8 +9,13 @@
       <Swiper></Swiper>
     </div>
     <img src="https://m.360buyimg.com/mobilecms/jfs/t23977/215/934912124/149709/a2412b1/5b4866daN1550ce15.gif" class="hot">
-
     <NavBars></NavBars>
+    <div class="recommend">
+      <div class="gray-text">
+        <span class="gray-layout">为您推荐</span>
+      </div>
+      <recommendList></recommendList>
+    </div>
   </div>
 </template>
 <script>
@@ -19,7 +24,7 @@ import "./style.scss"
 
 import config from './../../api/config'
 
-import { Swiper, NavBars } from './../../components';
+import { Swiper, NavBars, recommendList } from './../../components';
 
 
 export default {
@@ -48,7 +53,8 @@ export default {
   },
   components: { 
     Swiper,
-    NavBars
+    NavBars,
+    recommendList
   }
 }
 </script>

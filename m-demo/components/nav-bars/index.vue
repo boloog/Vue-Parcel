@@ -59,7 +59,7 @@ export default {
             height: 0.9rem;
             background: url('./../../assets/images/nav-bars.png') no-repeat;
             background-size: 7.2rem;
-            margin: 0 auto .1rem;
+            margin: 0 auto .2rem;
             &.item0{
                 background-position: 0 0;
             }
