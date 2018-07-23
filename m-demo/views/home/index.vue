@@ -1,7 +1,7 @@
 <template>
   <div class="home-page">
     <div class="nav-box">
-      <img src="https://css.mafengwo.net/mobile/images/header/logo2.png" class="logo">
+      <img src="./../../assets/images/boloog.png" class="logo">
       <div class="nav-search">搜索目的地/攻略/游记</div>
       <span class="login-button">登录</span>
     </div>
@@ -14,7 +14,7 @@
       <div class="gray-text">
         <span class="gray-layout">为您推荐</span>
       </div>
-      <recommendList></recommendList>
+      <RecommendList></RecommendList>
     </div>
   </div>
 </template>
@@ -24,7 +24,7 @@ import "./style.scss"
 
 import config from './../../api/config'
 
-import { Swiper, NavBars, recommendList } from './../../components';
+import { Swiper, NavBars, RecommendList } from './../../components';
 
 
 export default {
@@ -54,7 +54,7 @@ export default {
   components: { 
     Swiper,
     NavBars,
-    recommendList
+    RecommendList
   }
 }
 </script>

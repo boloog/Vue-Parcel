@@ -12,28 +12,28 @@ export default {
       return {
           tabs: [{
               path: '/',
-              text: '找功略',
+              text: '超市',
           },{
               path: '/',
-              text: '看游记',
+              text: '图书',
           },{
               path: '/',
-              text: '问达人',
+              text: '客服',
           },{
               path: '/',
-              text: '结伴',
+              text: '组团',
           },{
               path: '/',
               text: '酒店',
           },{
               path: '/',
-              text: '旅行商城',
+              text: '旅行',
           },{
               path: '/',
-              text: '机票',
+              text: '出国',
           },{
               path: '/',
-              text: '当地玩乐',
+              text: 'PULS',
           }]
       }
     }

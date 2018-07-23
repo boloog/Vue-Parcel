@@ -1,9 +1,12 @@
 <template>
   <div class="app">
     <router-view></router-view>
+    <Footer></Footer>
   </div>
 </template>
 <script>
+import { Footer } from './components';
+
 export default {
   name: 'app',
   data () {
@@ -12,6 +15,9 @@ export default {
         name: 'page',
       }]
     }
+  },
+  components: {
+    Footer
   }
 }
 </script>
