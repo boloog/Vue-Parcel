@@ -1,8 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-
-const SOME_MUTATION = 'SOME_MUTATION'
-
+import api from './../api'
 
 Vue.use(Vuex)
 
@@ -21,38 +19,24 @@ const store = new Vuex.Store({
       { id: 3, text: '...', done: true },
     ]
 	},
-	mutations: { // 变更状态
-		increment(state, payload) {
-      state.count += payload.amount
-		},
-    decrement(state, payload) {
-      state.count -= payload.amount 
-    },
-    [SOME_MUTATION](state, payload) {
-      state.count -= payload.amount 
+  mutations: {
+    indexSet(state, data){
+      state[data['target']] = data.data
     }
   },
   actions: {
-    // increment ({ commit }, payload) {
-    //   commit('increment', payload)
-    // },
-    incrementAsync ({ commit }, payload) {
-      setTimeout(() => {
-        commit('increment', payload)
-      }, 1000)
-    }
-  },
-  // getter 的返回值会根据它的依赖被缓存起来，且只有当它的依赖值发生了改变才会被重新计算
-  getters: {
-    doneTodos: state => {
-      return state.todos.filter(todo => todo.done)
+    fetchProject({commit}, params){
+      return api.post('/movie/in_theaters', params).then(res => {
+        commit('indexSet', {
+          target: 'project',
+          data: res.data
+        })
+        return Promise.resolve()
+      }, res => {
+        console.log('fail')
+        return Promise.reject()
+      })
     },
-    doneTodosCount: (state, getters) => {
-      return getters.doneTodos.length
-    },
-    getTodoById: (state) => (id) =>{
-      return state.todos.find(todo => todo.id === id)
-    }
   }
 })
 

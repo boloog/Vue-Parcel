@@ -11,7 +11,7 @@
 </template>
 <script>
 export default {
-    name: 'footer',
+    name: 'v-footer',
     data() {
       return {
 

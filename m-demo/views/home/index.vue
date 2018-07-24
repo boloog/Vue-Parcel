@@ -19,19 +19,18 @@
   </div>
 </template>
 <script>
-import axios from 'axios/dist/axios.min.js'
+
 import "./style.scss"
 
-import config from './../../api/config'
+import { mapState } from 'vuex'
 
-import { Swiper, NavBars, RecommendList } from './../../components';
+import { Swiper, NavBars, RecommendList } from './../../components'
 
 
 export default {
   name:'home',
   data () {
     return {
-      config,
       tabNav: [{
         name: '首页',
         path: '/'
@@ -44,9 +43,13 @@ export default {
       }]
     }
   },
+  computed: mapState({
+    project: state => state.project
+  }),
   created () {
-    // console.log(axios)
+    this.$store.dispatch("fetchProject")
 
+    console.log('project', this.project)
   },
   methods: {
 
